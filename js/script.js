@@ -23,15 +23,15 @@ const app = new Vue (
                     done: false
                 },
                 {
-                    text: 'Fare la spesa',
-                    done: false
+                    text: 'Preparare la cena',
+                    done: true
                 },
                 {
-                    text: 'Fare la spesa',
+                    text: 'Chiamare Pippo',
                     done: false
                 }, 
                 {
-                    text: 'Fare la spesa',
+                    text: 'Comprare caricatore telefono',
                     done: false
                 }
             ]

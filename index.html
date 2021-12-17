@@ -33,7 +33,7 @@
                     <ul>
                         <li v-for="todo in todos">
                             <div class="todo-text">
-                                <h3>{{todo.text}}</h3>
+                                <h3 :class="(todo.done == true) ? 'line-through' : ''">{{todo.text}}</h3>
                             </div>
                             <i class="far fa-times-circle"></i>
                         </li>
