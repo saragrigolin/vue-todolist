@@ -55,6 +55,10 @@ ul {
     list-style-type: none;
 }
 
+i {
+    cursor: pointer;
+}
+
 .todo-list li {
     padding: 1em;
     background: linear-gradient(90deg,#87b7ff, #2974e5);
@@ -62,6 +66,7 @@ ul {
     margin-bottom: 10px;
     display: flex;
     align-items: center;
+    justify-content: space-around;
 }
 
 .todo-list .todo-text {
