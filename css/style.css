@@ -54,3 +54,20 @@ html {
 ul {
     list-style-type: none;
 }
+
+.todo-list li {
+    padding: 1em;
+    background: linear-gradient(90deg,#87b7ff, #2974e5);
+    border-radius: 15px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.todo-list .todo-text {
+    width: calc(100% - 1.5em);
+}
+
+.todo-list i {
+    font-size: 1.5em;
+}
