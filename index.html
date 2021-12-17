@@ -17,7 +17,7 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="container">
+    <div class="container" id="app">
         <div class="inner-container">
             <header class="header">
                 <h1 class="title">My ToDo List</h1>
@@ -31,9 +31,9 @@
                 </div>
                 <div class="todo-list">
                     <ul>
-                        <li>
+                        <li v-for="todo in todos">
                             <div class="todo-text">
-                                <h3>Text</h3>
+                                <h3>{{todo.text}}</h3>
                             </div>
                             <i class="far fa-times-circle"></i>
                         </li>
