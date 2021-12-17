@@ -25,7 +25,7 @@
             <main>
                 <div class="add-to-do">
                     <div class="input">
-                        <input v-model="newTodo" type="text" placeholder="Add Todo">
+                        <input v-model="newTodo" type="text" placeholder="Add Todo" @keyup.enter="addTodo">
                         <i @click="addTodo" class="fas fa-plus-circle"></i>
                     </div>
                 </div>
@@ -34,7 +34,7 @@
                         <li v-for="(todo, index) in todos">
                             <div class="todo-text">
                                 <i class="far" :class="(todo.done == false) ? 'fa-square' : 'fa-check-square'" @click="todo.done = !todo.done"></i>
-                                <h3 :class="(todo.done == true) ? 'line-through' : ''">{{todo.text}}</h3>
+                                <h3 :class="(todo.done == true) ? 'line-through' : ''" @click="todo.done = !todo.done">{{todo.text}}</h3>
                             </div>
                             <i @click="removeTodo(index)" class="far fa-times-circle"></i>
                         </li>
