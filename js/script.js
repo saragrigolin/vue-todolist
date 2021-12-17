@@ -24,7 +24,7 @@ const app = new Vue (
                 },
                 {
                     text: 'Preparare la cena',
-                    done: true
+                    done: false
                 },
                 {
                     text: 'Chiamare Pippo',
@@ -35,6 +35,11 @@ const app = new Vue (
                     done: false
                 }
             ]
+        },
+        methods: {
+            removeTodo: function (index) {
+                this.todos.splice(index, 1);
+            }
         }
     }
 )

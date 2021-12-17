@@ -25,6 +25,14 @@ html {
     padding: 3em;
 }
 
+.header {
+    height: 100px;
+}
+
+main {
+    height: calc(100% - 100px);
+}
+
 .add-to-do {
     margin: 10px 0;
 }
@@ -34,7 +42,9 @@ html {
     border-radius: 1.5em;
     display: flex;
     justify-content: space-around;
+    align-items: center;
     padding: 10px;
+    height: 50px;
 }
 
 .input:focus-within {
@@ -59,6 +69,10 @@ i {
     cursor: pointer;
 }
 
+.todo-text {
+    display: flex;
+}
+
 .todo-list li {
     padding: 1em;
     background: linear-gradient(90deg,#87b7ff, #2974e5);
@@ -69,12 +83,21 @@ i {
     justify-content: space-around;
 }
 
+.todo-list {
+    height: calc(100% - 50px);
+    overflow-y: auto;
+}
+
 .todo-list .todo-text {
     width: calc(100% - 1.5em);
 }
 
 .todo-list i {
     font-size: 1.5em;
+}
+
+.todo-list h3 {
+    margin-left: 1em;
 }
 
 h3.line-through {

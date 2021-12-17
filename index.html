@@ -33,9 +33,10 @@
                     <ul>
                         <li v-for="todo in todos">
                             <div class="todo-text">
-                                <h3 :class="(todo.done == true) ? 'line-through' : ''">{{todo.text}}</h3>
+                                <i class="far" :class="(todo.done == false) ? 'fa-square' : 'fa-check-square'" @click="todo.done = !todo.done"></i>
+                                <h3 :class="(todo.done == true) ? 'line-through' : ''" @click="todo.done = !todo.done">{{todo.text}}</h3>
                             </div>
-                            <i class="far fa-times-circle"></i>
+                            <i @click="removeTodo(index)" class="far fa-times-circle"></i>
                         </li>
                     </ul>
                 </div>
