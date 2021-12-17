@@ -21,7 +21,7 @@ const app = new Vue (
     {
         el: '#app',
         data: {
-            newTodo: '',
+            newTodo: '', //nuovo Todo
             todos: [
                 {
                     text: 'Fare la spesa',
@@ -42,19 +42,19 @@ const app = new Vue (
             ]
         },
         methods: {
-            addTodo: function () {
-                if(this.newTodo.length != 0){
-                    let element = {
+            addTodo: function () { //funzione per aggiungere un nuovo Todo
+                if(this.newTodo.length != 0){ //se il campo non è vuoto
+                    let element = { //creo oggetto
                         text: this.newTodo,
                         done: false
                     }
-                    this.todos.unshift(element);
-                    this.newTodo = '';
+                    this.todos.unshift(element); //inserisco all'inizio dell'array
+                    this.newTodo = ''; //svuoto il campo
                 }
                 
             },
             removeTodo: function (index) {
-                this.todos.splice(index, 1);
+                this.todos.splice(index, 1); //rimuovo l'oggetto in quella posizione
             }
         }
     }
